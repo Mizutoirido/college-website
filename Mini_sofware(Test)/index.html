@@ -156,7 +156,7 @@ label{display:block;font-size:13.5px;color:var(--muted);margin-bottom:3px}
 <dialog id="viewDlg">
   <div class="dlg-h">ຂໍ້ມູນນັກສຶກສາ</div>
   <div class="dlg-b" id="viewBody"></div>
-  <div class="dlg-f"><button class="btn primary" id="viewClose" type="button">ປິດ</button></div>
+  <div class="dlg-f"><button class="btn" id="viewPrint" type="button">ພິມ</button><button class="btn primary" id="viewClose" type="button">ປິດ</button></div>
 </dialog>
 <div id="toast" role="status"></div>
 
@@ -347,6 +347,7 @@ function viewStudent(r){
   $('#viewDlg').showModal();
 }
 $('#viewClose').onclick=()=>$('#viewDlg').close();
+$('#viewPrint').onclick=()=>window.print();
 
 /* ---------- dialogs ---------- */
 function openForm(title, bodyHtml, onSave){
